@@ -1,12 +1,5 @@
-<table border="1">
-    <tr>
-      <th>Etiqueta</th>
-      <th>Descrição</th>
-      <th>Aquisição</th>
-    </tr>
-    <tr *ngFor="let item of itens">
-      <td>{{ item.etiqueta }}</td>
-      <td>{{ item.descricao }}</td>
-      <td>{{ item.dataAquisicao | date: 'dd/MM/yyyy' }}</td>
-    </tr>
-  </table>
+<p-dataTable [value]="itens">
+  <p-column field="etiqueta" header="Etiqueta"></p-column>
+  <p-column field="descricao" header="Descrição"></p-column>
+  <p-column field="dataAquisicao" header="Data de Aquisição"></p-column>
+</p-dataTable>
