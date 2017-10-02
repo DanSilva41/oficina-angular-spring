@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   
-  empresa = 'Teste'
+  empresa = 'Algaworks'
   constructor() { }
 
   ngOnInit() {
