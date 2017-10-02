@@ -1,20 +1,31 @@
-<div class="ui-g">
+<form>
+  <div class="ui-g">
 
-    <div class="ui-g-12">
-      <h1>Gestão de Patrimônio</h1>
-    </div>
+      <div class="ui-g-12">
+        <h1>Gestão de Patrimônio</h1>
+      </div>
 
-    <div class="ui-g-6">
-      <label>Etiqueta</label>
-      <p-inputMask name="etiqueta" mask="aa9999"></p-inputMask>
-    </div>
+      <div class="ui-g-6 ui-fluid">
+        <label>Etiqueta</label>
+        <p-inputMask name="etiqueta" mask="aa9999"></p-inputMask>
+      </div>
 
-    <div class="ui-g-6">
-        <label>Data da Aquisição</label>
-        <p-calendar name="dataAquisicao" dateFormat="dd/mm/yy"></p-calendar>
-    </div>
+      <div class="ui-g-6 ui-fluid">
+          <label>Data da Aquisição</label>
+          <p-calendar name="dataAquisicao" dateFormat="dd/mm/yy"></p-calendar>
+      </div>
 
-</div>
+      <div class="ui-g-6 ui-fluid">
+          <label>Descrição</label>
+          <input pInputText name="descricao" />
+      </div>
+
+      <div class="ui-g-12">
+          <button pButton type="submit" label="Adicionar"></button>
+        </div>
+
+  </div>
+</form>
 
 <div class="ui-g">
   <div class="ui-g-12">
