@@ -1,4 +1,4 @@
-<form>
+<form #frm="ngForm" (ngSubmit)="adicionar(frm)" >
   <div class="ui-g">
 
       <div class="ui-g-12">
@@ -7,21 +7,22 @@
 
       <div class="ui-g-6 ui-fluid">
         <label>Etiqueta</label>
-        <p-inputMask name="etiqueta" mask="aa9999"></p-inputMask>
+        <p-inputMask name="etiqueta" mask="aa9999" ngModel  [required]="true"></p-inputMask>
       </div>
 
       <div class="ui-g-6 ui-fluid">
           <label>Data da Aquisição</label>
-          <p-calendar name="dataAquisicao" dateFormat="dd/mm/yy"></p-calendar>
+          <p-calendar name="dataAquisicao" dateFormat="dd/mm/yy" ngModel [required]="true"></p-calendar>
       </div>
 
       <div class="ui-g-6 ui-fluid">
           <label>Descrição</label>
-          <input pInputText name="descricao" />
+          <input pInputText name="descricao" ngModel [required]="true" />
       </div>
 
       <div class="ui-g-12">
-          <button pButton type="submit" label="Adicionar"></button>
+          <button pButton type="submit" label="Adicionar"
+            [disabled]="frm.invalid"></button>
         </div>
 
   </div>

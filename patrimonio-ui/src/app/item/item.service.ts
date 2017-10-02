@@ -12,4 +12,8 @@ export class ItemService {
     return this.http.get<any>(this.itensUrls);
   }
 
+  adicionar(item : any) {
+    return this.http.post(this.itensUrls, item);
+  }
+
 }

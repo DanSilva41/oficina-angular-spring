@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 import { ItemService } from './../item/item.service';
 
@@ -22,6 +23,16 @@ export class ItemCadastroComponent implements OnInit {
     this.itemService.listar().subscribe(dados => {
       this.itens = dados;
     });
+  }
+
+  adicionar(frm : FormControl) {
+    console.log(frm.value);
+
+    this.itemService.adicionar(frm.value)
+      .subscribe(() => {
+        frm.reset();
+        this.consultar();
+      });
   }
 
 }
