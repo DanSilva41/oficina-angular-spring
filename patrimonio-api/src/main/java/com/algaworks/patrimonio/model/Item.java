@@ -11,17 +11,17 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Item {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+	
 	@NotEmpty
 	private String etiqueta;
-
+	
 	@NotEmpty
 	private String descricao;
-
+	
 	private LocalDate dataAquisicao;
 
 	public Long getId() {
