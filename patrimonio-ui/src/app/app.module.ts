@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
-import { DataTableModule } from 'primeng/primeng';
+import { DataTableModule, ButtonModule, InputTextModule, InputMaskModule, CalendarModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,8 +19,14 @@ import { ItemService } from './item/item.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    
     HttpClientModule,
-    DataTableModule
+    DataTableModule, 
+    ButtonModule, 
+    InputTextModule, 
+    InputMaskModule, 
+    CalendarModule 
   ],
   providers: [
     ItemService
